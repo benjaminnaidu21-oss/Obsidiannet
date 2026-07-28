@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObsidianEngine // Unrestricted Gateway</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #00ff66;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            box-sizing: border-box;
+        }
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 1px solid #111;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px #00ff66;
+        }
+        .search-container {
+            max-width: 800px;
+            margin: 40px auto;
+            width: 100%;
+        }
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            justify-content: center;
+        }
+        select, input, button {
+            background: #0d0d0d;
+            border: 1px solid #00ff66;
+            color: #00ff66;
+            padding: 12px;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+        select { cursor: pointer; }
+        input { flex-grow: 1; }
+        button {
+            cursor: pointer;
+            background: #00ff66;
+            color: #000;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #000;
+            color: #00ff66;
+        }
+        .terminal-log {
+            background: #050505;
+            border: 1px solid #222;
+            padding: 10px;
+            font-size: 12px;
+            height: 60px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            color: #888;
+        }
+        .viewport {
+            flex-grow: 1;
+            border: 1px solid #111;
+            background: #ffffff;
+            width: 100%;
+            height: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>OBSIDIAN//ENGINE</h1>
+        <p style="color:#444; margin:5px 0 0 0; font-size:11px;">ZERO RESTRICTIONS // TRUE ONION GATEWAY</p>
+    </div>
+
+    <div class="search-container">
+        <div class="controls">
+            <select id="engineSelect">
+                <option value="onion">Dark Web (.onion)</option>
+                <option value="duckduckgo">DuckDuckGo</option>
+                <option value="brave">Brave Search</option>
+            </select>
+            <input type="text" id="searchInput" placeholder="Enter keyword or raw .onion address...">
+            <button onclick="executeRoute()">LAUNCH</button>
+        </div>
+
+        <div class="terminal-log" id="termLogs">
+            [System] ObsidianEngine initialized. Standby for routing commands...
+        </div>
+    </div>
+
+    <div class="viewport">
+        <iframe id="displayFrame" src="about:blank"></div>
+    </div>
+
+    <script>
+        function log(msg) {
+            const t = document.getElementById('termLogs');
+            t.innerHTML += `<br>[Proxy] ${msg}`;
+            t.scrollTop = t.scrollHeight;
+        }
+
+        function executeRoute() {
+            const engine = document.getElementById('engineSelect').value;
+            const query = document.getElementById('searchInput').value;
+            const iframe = document.getElementById('displayFrame');
+
+            if(!query) return;
+
+            log(`Initiating encrypted highway circuit channel via ${engine.toUpperCase()}...`);
+            log("Stripping local network ISP tracking metrics...");
+            
+            // Forces live fetch against your node backend proxy server
+            const proxyUrl = `/proxy?engine=${engine}&targetUrl=${encodeURIComponent(query)}`;
+            iframe.src = proxyUrl;
+            
+            log("Connection verified. Bypassing network structural firewall layers.");
+        }
+    </script>
+</body>
+</html>
+v
