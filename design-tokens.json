@@ -1,0 +1,24 @@
+{
+  "themeName": "ObsidianEngine-Core",
+  "colors": {
+    "background-canvas": "#000000",
+    "surface-elevation-1": "#0A0A0C",
+    "surface-elevation-2": "#121214",
+    "border-muted": "#1F1F23",
+    "brand-primary": "#00FF66",
+    "brand-primary-glow": "rgba(0, 255, 102, 0.45)",
+    "text-high-contrast": "#FFFFFF",
+    "text-muted": "#6E6E77",
+    "system-error": "#FF3333"
+  },
+  "typography": {
+    "fontFamily-mono": "'Courier New', Courier, monospace",
+    "fontFamily-sans": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "letterSpacing-wide": "0.25em"
+  },
+  "layout": {
+    "max-width-container": "800px",
+    "border-radius-sharp": "0px",
+    "border-width": "1px"
+  }
+}
