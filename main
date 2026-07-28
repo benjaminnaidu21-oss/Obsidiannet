@@ -1,0 +1,13 @@
+# Initialize git in your local project folder
+git init
+
+# Rename your current working branch to the GitHub default name
+git branch -M main
+
+# Stage and commit all files (index.html, server.js, package.json, etc.)
+git add .
+git commit -m "feat: initial commit for ObsidianEngine core"
+
+# Link your local machine to your online GitHub repo and push to the default branch
+git remote add origin https://github.com[YOUR-USERNAME]/ObsidianEngine.git
+git push -u origin main
